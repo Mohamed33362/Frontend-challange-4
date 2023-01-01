@@ -1,0 +1,207 @@
+:root{
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);
+    --White: hsl(0, 0%, 100%);
+    --Verylightgrayishblue: hsl(210, 60%, 98%);
+    --Lightgrayishblue1: hsl(211, 68%, 94%);
+    --Lightgrayishblue2: hsl(205, 33%, 90%);
+    --Grayishblue: hsl(219, 14%, 63%);
+    --Darkgrayishblue: hsl(219, 12%, 42%);
+    --Verydarkblue: hsl(224, 21%, 14%);
+    --paragraph-font-size: 16px;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+@font-face {
+    font-family: "plus-E";
+    src: url(fonts/static/PlusJakartaSans-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "plus-M";
+    src: url(fonts/static/PlusJakartaSans-Medium.ttf);
+} 
+
+/* media query */
+
+@media(max-width: 575.98px) {
+    main{
+        width: 90% !important;
+        padding: 1rem !important;
+    }
+    .notificate{
+        flex-direction: column;
+    }
+    img{
+        width: 30% !important;
+    }
+    .angela{
+        align-self: center !important;
+    }
+    .text{
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+body{
+    background-color: var(--Verylightgrayishblue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main{
+    background-color: var(--White);
+    padding: 2rem;
+    width: 62%;
+}
+
+.notificate{
+    cursor: pointer;
+}
+
+.card-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+}
+
+h1{
+    font-family: "plus-E";
+    position: relative;
+    text-transform: capitalize;
+}
+
+h1::after{
+    content: "";
+}
+
+#mark{
+    color: var(--Grayishblue);
+    transition: 0.3s;
+}
+
+#mark:hover{
+    color: var(--Blue);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+    font-family: "plus-E";
+}
+
+a:hover{
+    color: var(--Blue);
+}
+
+a:nth-child(2){
+    color: var(--Blue);
+}
+
+.notificate{
+    display: flex;
+    align-items: center;
+    margin: 0px 0 10px ;
+    padding: 10px 20px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.info{
+    display: flex;
+}
+
+p{
+    margin: 0 10px;
+    position: relative;
+    color: var(--Grayishblue);
+    font-family: "plus-M";
+}
+
+.massage{
+        margin: 15px 10px;
+        border: 2px solid;
+        padding: 20px;
+        font-size: 19px;
+        transition: 0.3s;
+        cursor: pointer;
+        border-radius: 4px;
+}
+
+.massage:hover{
+    background-color: var(--Lightgrayishblue2);
+    color: var(--Darkgrayishblue);
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+
+span{
+    color: var(--Darkgrayishblue);
+    cursor: pointer;
+    font-size: 17px;
+    font-family: "plus-E";
+}
+
+span:hover{
+    color: var(--Blue);
+}
+
+.card-head span{
+    background-color: var(--Blue);
+    padding: 7px 15px;
+    border-radius: 6px;
+    color: var(--White);
+    font-size: var(--paragraph-font-size);
+}
+
+div{
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    width: 7%;
+    margin: 1rem 0;
+}
+
+.chesss{
+    text-align: end;
+}
+.chess{
+    width: 20%;
+}
+
+.angela{
+    align-self: baseline;
+}
+
+.clicked{
+    background-color: var(--Lightgrayishblue1);
+    border-radius: 5px;
+}
+
+.bullet::after{
+    content: "";
+        width: 7px;
+        height: 7px;
+        background: var(--Red);
+        position: absolute;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: var(--paragraph-font-size);
+        right: -20px;
+}
